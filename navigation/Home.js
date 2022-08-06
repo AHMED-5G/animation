@@ -29,6 +29,24 @@ const Home = () => {
           }}
         />
       </View>
+      <View style={{ marginTop: 10 }}>
+        <MedButton
+          fontSize={20}
+          title="Ripple Effect Animation"
+          onPress={() => {
+            navigation.navigate("RippleEffectAnimation");
+          }}
+        />
+      </View>
+      <View style={{ marginTop: 10 }}>
+        <MedButton
+          fontSize={20}
+          title="Square Inside Circle"
+          onPress={() => {
+            navigation.navigate("SquareInsideCircle");
+          }}
+        />
+      </View>
     </View>
   );
 };

@@ -1,3 +1,4 @@
+//https://www.youtube.com/watch?v=PfC5Phrueww
 import { StyleSheet, Text, View, Animated } from "react-native";
 import React, { useRef, useEffect } from "react";
 import EmptyHeader from "../components/mini/EmptyHeader";

@@ -4,7 +4,9 @@ import * as React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HotelFlatList from "../screens/HotelFlatList";
 import Home from "./Home";
-import SquareInLoop from '../screens/SquareInLoop';
+import SquareInLoop from "../screens/SquareInLoop";
+import RippleEffectAnimation from "../screens/RippleEffectAnimation";
+import SquareInsideCircle from '../screens/SquareInsideCircle';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +26,16 @@ function Navigation() {
       <Stack.Screen
         name="SquareInLoop"
         component={SquareInLoop}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="RippleEffectAnimation"
+        component={RippleEffectAnimation}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SquareInsideCircle"
+        component={SquareInsideCircle}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
