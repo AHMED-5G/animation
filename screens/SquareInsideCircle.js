@@ -15,6 +15,8 @@ import {
   PanGestureHandler,
   PanGestureHandlerGestureEvent,
 } from "react-native-gesture-handler";
+import LightHeader from "../components/mini/LightHeader";
+import EmptyHeader from "../components/mini/EmptyHeader";
 const SquareInsideCircle = () => {
   const size = 100;
   const radius = size * 1.5;
@@ -29,7 +31,6 @@ const SquareInsideCircle = () => {
     onActive: (event, context) => {
       translateX.value = event.translationX + context.translateX;
       translateY.value = event.translationY + context.translateY;
-
     },
     onEnd: () => {
       const distance = Math.sqrt(translateX.value ** 2 + translateY.value ** 2);
@@ -51,43 +52,46 @@ const SquareInsideCircle = () => {
     };
   });
   return (
-    <GestureHandlerRootView
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <View
+    <View style={{ flex: 1 }}>
+      <LightHeader back />
+      <GestureHandlerRootView
         style={{
-          width: radius * 2,
-          height: radius * 2,
-          // backgroundColor: "red",
-          borderRadius: radius,
-          borderWidth: 5,
-          borderRightColor: "rgba(0,0,256, .5)",
+          flex: 1,
+          justifyContent: "center",
           alignContent: "center",
           alignItems: "center",
-          justifyContent: "center",
         }}
       >
-        <PanGestureHandler onGestureEvent={panGestureEvent}>
-          <Animated.View
-            style={[
-              {
-                flexDirection: "column",
-                width: size,
-                height: size,
-                backgroundColor: "rgba(0,0,256, .5)",
-                borderRadius: 20,
-              },
-              rStyle,
-            ]}
-          />
-        </PanGestureHandler>
-      </View>
-    </GestureHandlerRootView>
+        <View
+          style={{
+            width: radius * 2,
+            height: radius * 2,
+            // backgroundColor: "red",
+            borderRadius: radius,
+            borderWidth: 5,
+            borderRightColor: "rgba(0,0,256, .5)",
+            alignContent: "center",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <PanGestureHandler onGestureEvent={panGestureEvent}>
+            <Animated.View
+              style={[
+                {
+                  flexDirection: "column",
+                  width: size,
+                  height: size,
+                  backgroundColor: "rgba(0,0,256, .5)",
+                  borderRadius: 20,
+                },
+                rStyle,
+              ]}
+            />
+          </PanGestureHandler>
+        </View>
+      </GestureHandlerRootView>
+    </View>
   );
 };
 

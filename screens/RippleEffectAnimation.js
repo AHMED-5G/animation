@@ -6,12 +6,15 @@ import Ripple from "../components/Ripple";
 import {
   TapGestureHandler,
   RotationGestureHandler,
+  GestureHandlerRootView,
 } from "react-native-gesture-handler";
+import { useAnimatedStyle } from "react-native-reanimated";
 const RippleEffectAnimation = () => {
+
   return (
     <View>
       <EmptyHeader />
-      <View
+      <GestureHandlerRootView
         style={{
           justifyContent: "center",
           alignContent: "center",
@@ -31,10 +34,9 @@ const RippleEffectAnimation = () => {
             alignItems: "center",
           }}
           onTap={() => {
-            console.log("taaap");
           }}
-        ></Ripple>
-      </View>
+        />
+      </GestureHandlerRootView>
     </View>
   );
 };
