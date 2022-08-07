@@ -47,6 +47,15 @@ const Home = () => {
           }}
         />
       </View>
+      <View style={{ marginTop: 10 }}>
+        <MedButton
+          fontSize={20}
+          title="Double Tap Like Instagram"
+          onPress={() => {
+            navigation.navigate("DoubleTapLikeInstagram");
+          }}
+        />
+      </View>
     </View>
   );
 };
