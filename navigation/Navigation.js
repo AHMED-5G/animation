@@ -8,6 +8,7 @@ import SquareInLoop from "../screens/SquareInLoop";
 import RippleEffectAnimation from "../screens/RippleEffectAnimation";
 import SquareInsideCircle from "../screens/SquareInsideCircle";
 import DoubleTapLikeInstagram from "../screens/DoubleTapLikeInstagram";
+import ImageDoubleTap from "../screens/ImageDoubleTap";
 
 const Stack = createNativeStackNavigator();
 
@@ -42,6 +43,11 @@ function Navigation() {
       <Stack.Screen
         name="DoubleTapLikeInstagram"
         component={DoubleTapLikeInstagram}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ImageDoubleTap"
+        component={ImageDoubleTap}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
