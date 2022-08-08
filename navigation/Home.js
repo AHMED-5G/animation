@@ -65,6 +65,15 @@ const Home = () => {
           }}
         />
       </View>
+      <View style={{ marginTop: 10 }}>
+        <MedButton
+          fontSize={20}
+          title="Swipe To Delete"
+          onPress={() => {
+            navigation.navigate("SwipeToDelete");
+          }}
+        />
+      </View>
     </View>
   );
 };

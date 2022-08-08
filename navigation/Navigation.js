@@ -9,6 +9,7 @@ import RippleEffectAnimation from "../screens/RippleEffectAnimation";
 import SquareInsideCircle from "../screens/SquareInsideCircle";
 import DoubleTapLikeInstagram from "../screens/DoubleTapLikeInstagram";
 import ImageDoubleTap from "../screens/ImageDoubleTap";
+import SwipeToDelete from '../screens/SwipeToDelete';
 
 const Stack = createNativeStackNavigator();
 
@@ -48,6 +49,11 @@ function Navigation() {
       <Stack.Screen
         name="ImageDoubleTap"
         component={ImageDoubleTap}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SwipeToDelete"
+        component={SwipeToDelete}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
