@@ -11,6 +11,7 @@ import DoubleTapLikeInstagram from "../screens/DoubleTapLikeInstagram";
 import ImageDoubleTap from "../screens/ImageDoubleTap";
 import SwipeToDelete from "../screens/SwipeToDelete";
 import ScrollViewFromScratch from '../screens/ScrollViewFromScratch';
+import RandomizeImages from '../screens/RandomizeImages';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +24,11 @@ function Navigation() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
+        name="RandomizeImages"
+        component={RandomizeImages}
+        options={{ headerShown: false }}
+      />   
+         <Stack.Screen
         name="ScrollViewFromScratch"
         component={ScrollViewFromScratch}
         options={{ headerShown: false }}

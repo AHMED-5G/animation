@@ -15,6 +15,15 @@ const Home = () => {
       <EmptyHeader />
       <View style={{ marginTop: 10 }}>
         <MedButton
+          title="Randomize Images"
+          onPress={() => {
+            navigation.navigate("RandomizeImages");
+          }}
+          fontSize={20}
+        />
+      </View>
+      <View style={{ marginTop: 10 }}>
+        <MedButton
           title="Scroll View From Scratch"
           onPress={() => {
             navigation.navigate("ScrollViewFromScratch");
