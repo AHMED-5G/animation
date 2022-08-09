@@ -13,7 +13,16 @@ const Home = () => {
       }}
     >
       <EmptyHeader />
-      <View>
+      <View style={{ marginTop: 10 }}>
+        <MedButton
+          title="Scroll View From Scratch"
+          onPress={() => {
+            navigation.navigate("ScrollViewFromScratch");
+          }}
+          fontSize={20}
+        />
+      </View>
+      <View style={{ marginTop: 10 }}>
         <MedButton
           title="Hotel Flat List"
           onPress={() => {

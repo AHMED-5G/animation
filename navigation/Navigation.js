@@ -9,7 +9,8 @@ import RippleEffectAnimation from "../screens/RippleEffectAnimation";
 import SquareInsideCircle from "../screens/SquareInsideCircle";
 import DoubleTapLikeInstagram from "../screens/DoubleTapLikeInstagram";
 import ImageDoubleTap from "../screens/ImageDoubleTap";
-import SwipeToDelete from '../screens/SwipeToDelete';
+import SwipeToDelete from "../screens/SwipeToDelete";
+import ScrollViewFromScratch from '../screens/ScrollViewFromScratch';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +20,11 @@ function Navigation() {
       <Stack.Screen
         name="Home"
         component={Home}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ScrollViewFromScratch"
+        component={ScrollViewFromScratch}
         options={{ headerShown: false }}
       />
       <Stack.Screen
