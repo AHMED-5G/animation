@@ -10,8 +10,9 @@ import SquareInsideCircle from "../screens/SquareInsideCircle";
 import DoubleTapLikeInstagram from "../screens/DoubleTapLikeInstagram";
 import ImageDoubleTap from "../screens/ImageDoubleTap";
 import SwipeToDelete from "../screens/SwipeToDelete";
-import ScrollViewFromScratch from '../screens/ScrollViewFromScratch';
-import RandomizeImages from '../screens/RandomizeImages';
+import ScrollViewFromScratch from "../screens/ScrollViewFromScratch";
+import RandomizeImages from "../screens/RandomizeImages";
+import FlashMessage from '../screens/FlashMessage';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,11 +25,16 @@ function Navigation() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
+        name="FlashMessage"
+        component={FlashMessage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
         name="RandomizeImages"
         component={RandomizeImages}
         options={{ headerShown: false }}
-      />   
-         <Stack.Screen
+      />
+      <Stack.Screen
         name="ScrollViewFromScratch"
         component={ScrollViewFromScratch}
         options={{ headerShown: false }}
