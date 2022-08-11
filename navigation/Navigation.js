@@ -12,7 +12,8 @@ import ImageDoubleTap from "../screens/ImageDoubleTap";
 import SwipeToDelete from "../screens/SwipeToDelete";
 import ScrollViewFromScratch from "../screens/ScrollViewFromScratch";
 import RandomizeImages from "../screens/RandomizeImages";
-import FlashMessage from '../screens/FlashMessage';
+import FlashMessage from "../screens/FlashMessage";
+import { EnteringExisting } from '../screens/EnteringExisting';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,11 @@ function Navigation() {
       <Stack.Screen
         name="Home"
         component={Home}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="EnteringExisting"
+        component={EnteringExisting}
         options={{ headerShown: false }}
       />
       <Stack.Screen
