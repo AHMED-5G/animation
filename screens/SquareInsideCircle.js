@@ -13,7 +13,6 @@ import { myColors } from "../constants/colors";
 import {
   GestureHandlerRootView,
   PanGestureHandler,
-  PanGestureHandlerGestureEvent,
 } from "react-native-gesture-handler";
 import LightHeader from "../components/mini/LightHeader";
 import EmptyHeader from "../components/mini/EmptyHeader";

@@ -1,5 +1,3 @@
-// In App.js in a new project
-
 import * as React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HotelFlatList from "../screens/HotelFlatList";
@@ -13,7 +11,8 @@ import SwipeToDelete from "../screens/SwipeToDelete";
 import ScrollViewFromScratch from "../screens/ScrollViewFromScratch";
 import RandomizeImages from "../screens/RandomizeImages";
 import FlashMessage from "../screens/FlashMessage";
-import { EnteringExisting } from '../screens/EnteringExisting';
+import { EnteringExisting } from "../screens/EnteringExisting";
+import DragAndDrop from "../screens/DragAndDrop";
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +27,11 @@ function Navigation() {
       <Stack.Screen
         name="EnteringExisting"
         component={EnteringExisting}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DragAndDrop"
+        component={DragAndDrop}
         options={{ headerShown: false }}
       />
       <Stack.Screen

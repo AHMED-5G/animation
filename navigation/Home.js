@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import EmptyHeader from "../components/mini/EmptyHeader";
 import MedButton from "../components/mini/MedButton";
@@ -7,7 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 const Home = () => {
   const navigation = useNavigation();
   return (
-    <View
+    <ScrollView
       style={{
         flex: 1,
       }}
@@ -15,12 +15,21 @@ const Home = () => {
       <EmptyHeader />
       <View style={{ marginTop: 10 }}>
         <MedButton
-          title="Entering Existing"
+          title="Drag And Drop"
           onPress={() => {
-            navigation.navigate("EnteringExisting");
+            navigation.navigate("DragAndDrop");
           }}
           fontSize={20}
         />
+        <View style={{ marginTop: 10 }}>
+          <MedButton
+            title="Entering Existing"
+            onPress={() => {
+              navigation.navigate("EnteringExisting");
+            }}
+            fontSize={20}
+          />
+        </View>
       </View>
       <View style={{ marginTop: 10 }}>
         <MedButton
@@ -110,7 +119,7 @@ const Home = () => {
           }}
         />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
