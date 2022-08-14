@@ -13,6 +13,7 @@ import RandomizeImages from "../screens/RandomizeImages";
 import FlashMessage from "../screens/FlashMessage";
 import { EnteringExisting } from "../screens/EnteringExisting";
 import DragAndDrop from "../screens/DragAndDrop";
+import Draw from '../screens/Draw';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,11 @@ function Navigation() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
+        name="Draw"
+        component={Draw}
+        options={{ headerShown: false }}
+      />     
+       <Stack.Screen
         name="EnteringExisting"
         component={EnteringExisting}
         options={{ headerShown: false }}
