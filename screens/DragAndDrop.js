@@ -169,13 +169,13 @@ const DragAndDrop = () => {
     };
   });
 
-  const vvv = r2Answer == r2Expecting ? "yes" : "no";
   return (
     <View style={{ flex: 1 }}>
       <LightHeader back />
       <GestureHandlerRootView
         style={{
-          flex: 1,
+          // flex: 1,
+          height: 400,
         }}
       >
         <PanGestureHandler onGestureEvent={l1PanGestureEvent}>
@@ -210,47 +210,47 @@ const DragAndDrop = () => {
             ]}
           />
         </PanGestureHandler>
-        <View
-          style={{
+      </GestureHandlerRootView>
+      <View
+        style={{
+          flexDirection: "column",
+          width: size,
+          height: size,
+          borderRadius: 20,
+          position: "absolute",
+          borderWidth: r1Answer == r1Expecting ? 2 : 1,
+          borderColor: r1Answer == r1Expecting ? "green" : "black",
+          right: 10,
+          top: 120,
+          zIndex: 2,
+        }}
+      >
+        <Text>{r1}</Text>
+      </View>
+      <View
+        style={[
+          {
             flexDirection: "column",
             width: size,
             height: size,
-            borderRadius: 20,
+            borderRadius: 100,
             position: "absolute",
-            borderWidth: r1Answer == r1Expecting ? 2 : 1,
-            borderColor: r1Answer == r1Expecting ? "green" : "black",
+            borderWidth: r2Answer == r2Expecting ? 2 : 1,
+            borderColor: r2Answer == r2Expecting ? "green" : "black",
             right: 10,
-            top: 120,
+            top: 240,
             zIndex: 2,
-          }}
-        >
-          <Text>{r1}</Text>
-        </View>
-        <Animated.View
-          style={[
-            {
-              flexDirection: "column",
-              width: size,
-              height: size,
-              borderRadius: 100,
-              position: "absolute",
-              borderWidth: r2Answer == r2Expecting ? 2 : 1,
-              borderColor: r2Answer == r2Expecting ? "green" : "black",
-              right: 10,
-              top: 240,
-              zIndex: 2,
-            },
-          ]}
-        >
-          <Text>{r2}</Text>
-        </Animated.View>
-        <View style={{ marginTop: 500, marginLeft: 10 }}>
-          <Text>r1 answer: {r1Answer}</Text>
-          <Text>
-            r2 answer : {r2Answer} {r2Expecting}
-          </Text>
-        </View>
-      </GestureHandlerRootView>
+          },
+        ]}
+      >
+        <Text>{r2}</Text>
+      </View>
+      <View style={{ marginTop: 20, marginLeft: 10 }}>
+        <Text>r1 answer: {r1Answer}</Text>
+        <Text>
+          r2 answer : {r2Answer} {r2Expecting}
+        </Text>
+      </View>
     </View>
   );
 };

@@ -15,6 +15,15 @@ const Home = () => {
       <EmptyHeader />
       <View style={{ marginTop: 10 }}>
         <MedButton
+          title="Pan Responder"
+          onPress={() => {
+            navigation.navigate("PanResponder");
+          }}
+          fontSize={20}
+        />
+      </View>
+      <View style={{ marginTop: 10 }}>
+        <MedButton
           title="Drag And Drop"
           onPress={() => {
             navigation.navigate("DragAndDrop");
