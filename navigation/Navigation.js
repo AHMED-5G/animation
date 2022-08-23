@@ -14,7 +14,8 @@ import FlashMessage from "../screens/FlashMessage";
 import { EnteringExisting } from "../screens/EnteringExisting";
 import DragAndDrop from "../screens/DragAndDrop";
 import Draw from "../screens/Draw";
-import PanResponder from '../screens/PanResponderView';
+import PanResponder from "../screens/PanResponderView";
+import FacebookLike from '../screens/FacebookLike';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +25,11 @@ function Navigation() {
       <Stack.Screen
         name="Home"
         component={Home}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="FacebookLike"
+        component={FacebookLike}
         options={{ headerShown: false }}
       />
       <Stack.Screen
