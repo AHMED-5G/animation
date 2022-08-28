@@ -6,7 +6,7 @@ import {
   KeyboardAvoidingView,
 } from "react-native";
 import React, { useState, useEffect } from "react";
-import { width } from "../../constants/dimensions";
+import { height, width } from "../../constants/dimensions";
 import { myColors } from "../../constants/colors";
 
 const FormTextInput = ({ ...props }) => {
@@ -51,12 +51,14 @@ const FormTextInput = ({ ...props }) => {
           <View>
             <Text>{props.icon}</Text>
           </View>
-          <KeyboardAvoidingView behavior="height">
+          <KeyboardAvoidingView
+            behavior='height'
+          >
             <TextInput
               placeholder={props.placeholder}
-              
               style={{
-                width: props.width ? props.width : width / 2 }}
+                width: props.width ? props.width : width / 2,
+              }}
               onChangeText={(text) => {
                 props.setText(text);
               }}
@@ -70,7 +72,7 @@ const FormTextInput = ({ ...props }) => {
             />
           </KeyboardAvoidingView>
         </View>
-        <View >
+        <View>
           <Text>{props.rightIcon}</Text>
         </View>
       </View>
