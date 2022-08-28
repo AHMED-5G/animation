@@ -15,6 +15,24 @@ const Home = () => {
       <EmptyHeader />
       <View style={{ marginTop: 10 }}>
         <MedButton
+          title="LogIn With Image"
+          onPress={() => {
+            navigation.navigate("LogInWithImage");
+          }}
+          fontSize={20}
+        />
+      </View>
+      <View style={{ marginTop: 10 }}>
+        <MedButton
+          title="Zara"
+          onPress={() => {
+            navigation.navigate("Zara");
+          }}
+          fontSize={20}
+        />
+      </View>
+      <View style={{ marginTop: 10 }}>
+        <MedButton
           title="Facebook Like"
           onPress={() => {
             navigation.navigate("FacebookLike");
@@ -63,15 +81,6 @@ const Home = () => {
           title="Flash Message"
           onPress={() => {
             navigation.navigate("FlashMessage");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          title="Randomize Images"
-          onPress={() => {
-            navigation.navigate("RandomizeImages");
           }}
           fontSize={20}
         />

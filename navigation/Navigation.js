@@ -9,13 +9,14 @@ import DoubleTapLikeInstagram from "../screens/DoubleTapLikeInstagram";
 import ImageDoubleTap from "../screens/ImageDoubleTap";
 import SwipeToDelete from "../screens/SwipeToDelete";
 import ScrollViewFromScratch from "../screens/ScrollViewFromScratch";
-import RandomizeImages from "../screens/RandomizeImages";
 import FlashMessage from "../screens/FlashMessage";
 import { EnteringExisting } from "../screens/EnteringExisting";
 import DragAndDrop from "../screens/DragAndDrop";
 import Draw from "../screens/Draw";
 import PanResponder from "../screens/PanResponderView";
-import FacebookLike from '../screens/FacebookLike';
+import FacebookLike from "../screens/FacebookLike";
+import Zara from "../screens/Zara";
+import LogInWithImage from '../screens/LogInWithImage';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,16 @@ function Navigation() {
       <Stack.Screen
         name="Home"
         component={Home}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="LogInWithImage"
+        component={LogInWithImage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Zara"
+        component={Zara}
         options={{ headerShown: false }}
       />
       <Stack.Screen
@@ -55,11 +66,6 @@ function Navigation() {
       <Stack.Screen
         name="FlashMessage"
         component={FlashMessage}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="RandomizeImages"
-        component={RandomizeImages}
         options={{ headerShown: false }}
       />
       <Stack.Screen

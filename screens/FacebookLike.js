@@ -166,7 +166,7 @@ const FacebookLike = () => {
                 {
                   translateX: rotate.interpolate({
                     inputRange: [0, 1],
-                    outputRange: ["-6", "6"],
+                    outputRange: [-6, 6],
                   }),
                 },
               ],

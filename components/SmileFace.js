@@ -6,6 +6,7 @@ const SmileFace = ({ onEmojiSelected }) => {
     <TouchableOpacity onPress={() => onEmojiSelected()}>
       <Image
         source={require("../assets/images/smile.png")}
+        // source={require("../assets/images/smilegif.gif")}
         style={{ height: 90, width: 90 }}
       />
     </TouchableOpacity>
