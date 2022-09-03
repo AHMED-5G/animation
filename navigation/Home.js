@@ -15,6 +15,15 @@ const Home = () => {
       <EmptyHeader />
       <View style={{ marginTop: 10 }}>
         <MedButton
+          title="Whats Up Reanimated"
+          onPress={() => {
+            navigation.navigate("WhatsUpReanimated");
+          }}
+          fontSize={20}
+        />
+      </View>
+      <View style={{ marginTop: 10 }}>
+        <MedButton
           title="LogIn With Image"
           onPress={() => {
             navigation.navigate("LogInWithImage");
