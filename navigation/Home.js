@@ -13,7 +13,16 @@ const Home = () => {
       }}
     >
       <EmptyHeader />
-      <View style={{ marginTop: 10 }}>
+      <View style={styles.btnContainer}>
+        <MedButton
+          title="Color Piker"
+          onPress={() => {
+            navigation.navigate("ColorPiker");
+          }}
+          fontSize={20}
+        />
+      </View>
+      <View style={styles.btnContainer}>
         <MedButton
           title="Whats Up Reanimated"
           onPress={() => {
@@ -155,7 +164,7 @@ const Home = () => {
           }}
         />
       </View>
-      <View style={{ marginTop: 10 }}>
+      <View style={{}}>
         <MedButton
           fontSize={20}
           title="Swipe To Delete"
@@ -170,4 +179,8 @@ const Home = () => {
 
 export default Home;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  btnContainer: {
+    marginTop: 10,
+  },
+});

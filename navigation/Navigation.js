@@ -17,7 +17,8 @@ import PanResponder from "../screens/PanResponderView";
 import FacebookLike from "../screens/FacebookLike";
 import Zara from "../screens/Zara";
 import LogInWithImage from "../screens/LogInWithImage";
-import WhatsUpReanimated from '../screens/WhatsUpReanimated';
+import WhatsUpReanimated from "../screens/WhatsUpReanimated";
+import ColorPiker from '../screens/ColorPiker';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +28,11 @@ function Navigation() {
       <Stack.Screen
         name="Home"
         component={Home}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ColorPiker"
+        component={ColorPiker}
         options={{ headerShown: false }}
       />
       <Stack.Screen
