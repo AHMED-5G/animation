@@ -15,6 +15,15 @@ const Home = () => {
       <EmptyHeader />
       <View style={styles.btnContainer}>
         <MedButton
+          title="Perspective Menu"
+          onPress={() => {
+            navigation.navigate("PerspectiveMenu");
+          }}
+          fontSize={20}
+        />
+      </View>
+      <View style={styles.btnContainer}>
+        <MedButton
           title="Color Piker"
           onPress={() => {
             navigation.navigate("ColorPiker");

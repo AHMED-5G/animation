@@ -18,108 +18,46 @@ import FacebookLike from "../screens/FacebookLike";
 import Zara from "../screens/Zara";
 import LogInWithImage from "../screens/LogInWithImage";
 import WhatsUpReanimated from "../screens/WhatsUpReanimated";
-import ColorPiker from '../screens/ColorPiker';
+import ColorPiker from "../screens/ColorPiker";
+import PerspectiveMenu from "../screens/PerspectiveMenu";
 
 const Stack = createNativeStackNavigator();
 
 function Navigation() {
   return (
-    <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen
-        name="Home"
-        component={Home}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="ColorPiker"
-        component={ColorPiker}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="WhatsUpReanimated"
-        component={WhatsUpReanimated}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="LogInWithImage"
-        component={LogInWithImage}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="Zara"
-        component={Zara}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="FacebookLike"
-        component={FacebookLike}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="PanResponder"
-        component={PanResponder}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="Draw"
-        component={Draw}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="EnteringExisting"
-        component={EnteringExisting}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="DragAndDrop"
-        component={DragAndDrop}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="FlashMessage"
-        component={FlashMessage}
-        options={{ headerShown: false }}
-      />
+    <Stack.Navigator
+      initialRouteName="Home"
+      screenOptions={{ headerShown: false }}
+    >
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="PerspectiveMenu" component={PerspectiveMenu} />
+      <Stack.Screen name="ColorPiker" component={ColorPiker} />
+      <Stack.Screen name="WhatsUpReanimated" component={WhatsUpReanimated} />
+      <Stack.Screen name="LogInWithImage" component={LogInWithImage} />
+      <Stack.Screen name="Zara" component={Zara} />
+      <Stack.Screen name="FacebookLike" component={FacebookLike} />
+      <Stack.Screen name="PanResponder" component={PanResponder} />
+      <Stack.Screen name="Draw" component={Draw} />
+      <Stack.Screen name="EnteringExisting" component={EnteringExisting} />
+      <Stack.Screen name="DragAndDrop" component={DragAndDrop} />
+      <Stack.Screen name="FlashMessage" component={FlashMessage} />
       <Stack.Screen
         name="ScrollViewFromScratch"
         component={ScrollViewFromScratch}
-        options={{ headerShown: false }}
       />
-      <Stack.Screen
-        name="HotelFlatList"
-        component={HotelFlatList}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="SquareInLoop"
-        component={SquareInLoop}
-        options={{ headerShown: false }}
-      />
+      <Stack.Screen name="HotelFlatList" component={HotelFlatList} />
+      <Stack.Screen name="SquareInLoop" component={SquareInLoop} />
       <Stack.Screen
         name="RippleEffectAnimation"
         component={RippleEffectAnimation}
-        options={{ headerShown: false }}
       />
-      <Stack.Screen
-        name="SquareInsideCircle"
-        component={SquareInsideCircle}
-        options={{ headerShown: false }}
-      />
+      <Stack.Screen name="SquareInsideCircle" component={SquareInsideCircle} />
       <Stack.Screen
         name="DoubleTapLikeInstagram"
         component={DoubleTapLikeInstagram}
-        options={{ headerShown: false }}
       />
-      <Stack.Screen
-        name="ImageDoubleTap"
-        component={ImageDoubleTap}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="SwipeToDelete"
-        component={SwipeToDelete}
-        options={{ headerShown: false }}
-      />
+      <Stack.Screen name="ImageDoubleTap" component={ImageDoubleTap} />
+      <Stack.Screen name="SwipeToDelete" component={SwipeToDelete} />
     </Stack.Navigator>
   );
 }

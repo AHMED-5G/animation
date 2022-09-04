@@ -1,3 +1,5 @@
+//https://www.youtube.com/watch?v=XH35ahDm3as&list=PLjHsmVtnAr9TWoMAh-3QMiP7bPUqPFuFZ&index=8
+
 import { StyleSheet, Text, View } from "react-native";
 import React, { useCallback } from "react";
 import ColorPickerComponent from "../components/ColorPickerComponent";
@@ -28,7 +30,7 @@ const ColorPiker = () => {
     };
   });
   const onColorChanged = useCallback((color) => {
-    'worklet'
+    "worklet";
     pikedColor.value = color;
   }, []);
   return (
