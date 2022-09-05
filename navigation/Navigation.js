@@ -20,6 +20,7 @@ import LogInWithImage from "../screens/LogInWithImage";
 import WhatsUpReanimated from "../screens/WhatsUpReanimated";
 import ColorPiker from "../screens/ColorPiker";
 import PerspectiveMenu from "../screens/PerspectiveMenu";
+import DiveInCircle from '../screens/DiveInCircle';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +31,7 @@ function Navigation() {
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="DiveInCircle" component={DiveInCircle} />
       <Stack.Screen name="PerspectiveMenu" component={PerspectiveMenu} />
       <Stack.Screen name="ColorPiker" component={ColorPiker} />
       <Stack.Screen name="WhatsUpReanimated" component={WhatsUpReanimated} />
