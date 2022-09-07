@@ -8,7 +8,6 @@ const PanResponderView = () => {
     PanResponder.create({
       onMoveShouldSetPanResponder: () => true,
       onPanResponderGrant: () => {
-        console.log(pan.x._value);
         pan.setOffset({
           x: pan.x._value,
           y: pan.y._value,

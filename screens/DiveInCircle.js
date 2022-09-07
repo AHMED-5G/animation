@@ -1,5 +1,4 @@
 //https://www.youtube.com/watch?v=vQNg06Hf0MQ
-
 import {
   StyleSheet,
   Text,

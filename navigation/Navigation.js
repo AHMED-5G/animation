@@ -15,12 +15,12 @@ import DragAndDrop from "../screens/DragAndDrop";
 import Draw from "../screens/Draw";
 import PanResponder from "../screens/PanResponderView";
 import FacebookLike from "../screens/FacebookLike";
-import Zara from "../screens/Zara";
 import LogInWithImage from "../screens/LogInWithImage";
 import WhatsUpReanimated from "../screens/WhatsUpReanimated";
 import ColorPiker from "../screens/ColorPiker";
 import PerspectiveMenu from "../screens/PerspectiveMenu";
 import DiveInCircle from '../screens/DiveInCircle';
+import Bubble from '../screens/Bubble';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,12 +31,12 @@ function Navigation() {
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Bubble" component={Bubble} />
       <Stack.Screen name="DiveInCircle" component={DiveInCircle} />
       <Stack.Screen name="PerspectiveMenu" component={PerspectiveMenu} />
       <Stack.Screen name="ColorPiker" component={ColorPiker} />
       <Stack.Screen name="WhatsUpReanimated" component={WhatsUpReanimated} />
       <Stack.Screen name="LogInWithImage" component={LogInWithImage} />
-      <Stack.Screen name="Zara" component={Zara} />
       <Stack.Screen name="FacebookLike" component={FacebookLike} />
       <Stack.Screen name="PanResponder" component={PanResponder} />
       <Stack.Screen name="Draw" component={Draw} />

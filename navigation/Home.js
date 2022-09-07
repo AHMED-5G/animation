@@ -15,6 +15,15 @@ const Home = () => {
       <EmptyHeader />
       <View style={styles.btnContainer}>
         <MedButton
+          title="Bubble"
+          onPress={() => {
+            navigation.navigate("Bubble");
+          }}
+          fontSize={20}
+        />
+      </View>
+      <View style={styles.btnContainer}>
+        <MedButton
           title="Dive In Circle"
           onPress={() => {
             navigation.navigate("DiveInCircle");
@@ -54,15 +63,6 @@ const Home = () => {
           title="LogIn With Image"
           onPress={() => {
             navigation.navigate("LogInWithImage");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          title="Zara"
-          onPress={() => {
-            navigation.navigate("Zara");
           }}
           fontSize={20}
         />
