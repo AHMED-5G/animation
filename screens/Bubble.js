@@ -21,7 +21,7 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 import { myColors } from "../constants/colors";
-import { width } from "../constants/dimensions";
+import { width, height } from "../constants/dimensions";
 import { AntDesign, Entypo } from "@expo/vector-icons";
 
 const Bubble = () => {
@@ -57,15 +57,22 @@ const Bubble = () => {
     };
   });
 
+
+  const resetPosition = () => {
+    setBubbleOpen(true);
+    translateX.value = withTiming(0);
+  };
   const openBubble = () => {
     openBubbleProgress.value = withTiming(
       1,
       {
         duration: 300,
       },
-      setBubbleOpen(true)
+      // setBubbleOpen(true)
+      resetPosition()
     );
   };
+  
   const closeBubble = () => {
     openBubbleProgress.value = withTiming(
       0,
@@ -75,17 +82,8 @@ const Bubble = () => {
       setBubbleOpen(false)
     );
   };
-  const doubleTapFire = () => {
-    !bubbleOpen ? openBubble() : closeBubble();
-  };
-  const [inTimeOut, setInTimeOut] = useState(false);
-  const handelDoubleTap = () => {
-    if (inTimeOut) doubleTapFire();
-    setInTimeOut(true);
-    setTimeout(() => {
-      setInTimeOut(false);
-    }, 250);
-  };
+
+
   const icons = [
     {
       id: 1,
@@ -170,7 +168,7 @@ const Bubble = () => {
               style={{ flex: 1 }}
               onPress={() => {
                 !bubbleOpen ? openBubble() : closeBubble();
-                // handelDoubleTap()
+                // handelDoubleTap();
               }}
             >
               {bubbleOpen ? (
