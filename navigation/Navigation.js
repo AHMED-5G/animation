@@ -21,6 +21,7 @@ import ColorPiker from "../screens/ColorPiker";
 import PerspectiveMenu from "../screens/PerspectiveMenu";
 import DiveInCircle from '../screens/DiveInCircle';
 import Bubble from '../screens/Bubble';
+import BottomSheet from '../screens/BottomSheet';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,7 @@ function Navigation() {
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="BottomSheet" component={BottomSheet} />
       <Stack.Screen name="Bubble" component={Bubble} />
       <Stack.Screen name="DiveInCircle" component={DiveInCircle} />
       <Stack.Screen name="PerspectiveMenu" component={PerspectiveMenu} />
