@@ -14,6 +14,7 @@
     "@gorhom/bottom-sheet": "^4",
     "@react-navigation/native": "^6.0.11",
     "@react-navigation/native-stack": "^6.7.0",
+    "dayjs": "^1.11.5",
     "expo": "^46.0.0",
     "expo-draw": "github:MarangoniEduardo/expo-draw",
     "expo-linear-gradient": "~11.4.0",
