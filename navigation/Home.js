@@ -21,8 +21,8 @@ const Home = () => {
           }}
           fontSize={20}
         />
-      </View>    
-        <View style={styles.btnContainer}>
+      </View>
+      <View style={styles.btnContainer}>
         <MedButton
           title="Bottom Sheet"
           onPress={() => {

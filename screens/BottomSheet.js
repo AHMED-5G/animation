@@ -9,7 +9,7 @@ import { StatusBar } from "expo-status-bar";
 const BottomSheet = () => {
   const myRef = useRef(null);
   const onPress = useCallback(() => {
-    myRef?.current?.scrollTo();
+    myRef?.current?.scrollTo(0);
   }, []);
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>

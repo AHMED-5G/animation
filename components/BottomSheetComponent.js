@@ -4,6 +4,7 @@ import React, {
   useCallback,
   useEffect,
   useImperativeHandle,
+  useState,
 } from "react";
 import { height } from "../constants/dimensions";
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
@@ -19,19 +20,9 @@ import Animated, {
 const BottomSheetComponent = React.forwardRef(({}, ref) => {
   const scrollTo = useCallback((destination) => {
     "worklet";
-    console.log("scroll tooo");
-    //   translateY.value = withSpring(destination, { damping: 50 });
+    translateY.value = withSpring(destination, { damping: 50 });
   }, []);
-  useImperativeHandle(
-    ref,
-    () => {
-      {
-        scrollTo;
-        
-      }
-    },
-    [scrollTo]
-  );
+  useImperativeHandle(ref, () => ({ scrollTo }));
 
   const translateY = useSharedValue(0);
   const context = useSharedValue({ y: 0 });
