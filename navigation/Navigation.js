@@ -24,6 +24,7 @@ import Bubble from '../screens/Bubble';
 import BottomSheet from '../screens/BottomSheet';
 import Clock from '../screens/Clock';
 import Skeleton from "../screens/Skeleton";
+import Test from '../screens/Test';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +35,7 @@ function Navigation() {
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Test" component={Test} />
       <Stack.Screen name="Skeleton" component={Skeleton} />
       <Stack.Screen name="Clock" component={Clock} />
       <Stack.Screen name="BottomSheet" component={BottomSheet} />
