@@ -122,7 +122,7 @@ const Home = () => {
           fontSize={20}
         />
       </View>
-      <View style={{ marginTop: 10 }}>
+      {/* <View style={{ marginTop: 10 }}>
         <MedButton
           title="Draw"
           onPress={() => {
@@ -130,7 +130,7 @@ const Home = () => {
           }}
           fontSize={20}
         />
-      </View>
+      </View> */}
       <View style={{ marginTop: 10 }}>
         <MedButton
           title="Entering Existing"
@@ -174,7 +174,7 @@ const Home = () => {
           }}
         />
       </View>
-      <View style={{ marginTop: 10 }}>
+      {/* <View style={{ marginTop: 10 }}>
         <MedButton
           fontSize={20}
           title="Ripple Effect Animation"
@@ -182,7 +182,7 @@ const Home = () => {
             navigation.navigate("RippleEffectAnimation");
           }}
         />
-      </View>
+      </View> */}
       <View style={{ marginTop: 10 }}>
         <MedButton
           fontSize={20}
@@ -210,7 +210,7 @@ const Home = () => {
           }}
         />
       </View>
-      <View style={{}}>
+      {/* <View style={{}}>
         <MedButton
           fontSize={20}
           title="Swipe To Delete"
@@ -218,7 +218,7 @@ const Home = () => {
             navigation.navigate("SwipeToDelete");
           }}
         />
-      </View>
+      </View> */}
     </ScrollView>
   );
 };
