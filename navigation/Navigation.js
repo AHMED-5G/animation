@@ -19,11 +19,16 @@ import LogInWithImage from "../screens/LogInWithImage";
 import WhatsUpReanimated from "../screens/WhatsUpReanimated";
 import ColorPiker from "../screens/ColorPiker";
 import PerspectiveMenu from "../screens/PerspectiveMenu";
-import DiveInCircle from '../screens/DiveInCircle';
-import Bubble from '../screens/Bubble';
-import BottomSheet from '../screens/BottomSheet';
-import Clock from '../screens/Clock';
+import DiveInCircle from "../screens/DiveInCircle";
+import Bubble from "../screens/Bubble";
+import BottomSheet from "../screens/BottomSheet";
+import Clock from "../screens/Clock";
 import Skeleton from "../screens/Skeleton";
+import Plus from "../screens/Plus";
+import PlusSlide from "../screens/PlusSlide";
+import RemoveAllItems from "../screens/RemoveAllItems";
+import { View } from "react-native";
+import Password from "../screens/Password";
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +39,22 @@ function Navigation() {
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Password" component={Password} />
+      <Stack.Screen
+        name="RemoveAllItems"
+        options={{
+          headerShown: true,
+          headerTitleAlign: "center",
+          headerTitle: "Cart",
+          headerTransparent: false,
+          headerLeft: () => {
+            return <View></View>;
+          },
+        }}
+        component={RemoveAllItems}
+      />
+      <Stack.Screen name="PlusSlide" component={PlusSlide} />
+      <Stack.Screen name="Plus" component={Plus} />
       <Stack.Screen name="Skeleton" component={Skeleton} />
       <Stack.Screen name="Clock" component={Clock} />
       <Stack.Screen name="BottomSheet" component={BottomSheet} />

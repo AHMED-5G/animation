@@ -57,7 +57,6 @@ const Bubble = () => {
     };
   });
 
-
   const resetPosition = () => {
     setBubbleOpen(true);
     translateX.value = withTiming(0);

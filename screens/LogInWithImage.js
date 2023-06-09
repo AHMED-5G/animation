@@ -3,10 +3,8 @@ import {
   StyleSheet,
   Text,
   View,
-  ImageBackground,
   Animated,
   TouchableOpacity,
-  KeyboardAvoidingView,
 } from "react-native";
 import React, { useEffect, useRef } from "react";
 import { height, width } from "../constants/dimensions";
@@ -19,6 +17,7 @@ const LogInWithImage = () => {
   const runMe = async () => {
     const visibility = await NavigationBar.setVisibilityAsync("hidden");
   };
+
   useEffect(() => {
     runMe();
   }, []);
@@ -31,6 +30,7 @@ const LogInWithImage = () => {
       useNativeDriver: true,
     }).start();
   };
+
   const back = () => {
     Animated.timing(progress, {
       toValue: 0,
@@ -38,6 +38,7 @@ const LogInWithImage = () => {
       useNativeDriver: true,
     }).start();
   };
+
   return (
     <View style={{ flex: 1 }}>
       <Animated.View

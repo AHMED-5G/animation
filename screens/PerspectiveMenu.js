@@ -35,6 +35,7 @@ const PerspectiveMenu = () => {
       }
     },
   });
+  
   const rStyle = useAnimatedStyle(() => {
     const rotate = interpolate(
       translateX.value,

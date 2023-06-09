@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import React from "react";
 import EmptyHeader from "../components/mini/EmptyHeader";
 import MedButton from "../components/mini/MedButton";
@@ -13,7 +13,42 @@ const Home = () => {
       }}
     >
       <EmptyHeader />
-
+      <View style={styles.btnContainer}>
+        <MedButton
+          title="Password"
+          onPress={() => {
+            navigation.navigate("Password");
+          }}
+          fontSize={20}
+        />
+      </View>
+      <View style={styles.btnContainer}>
+        <MedButton
+          title="Remove All Items"
+          onPress={() => {
+            navigation.navigate("RemoveAllItems");
+          }}
+          fontSize={20}
+        />
+      </View>
+      <View style={styles.btnContainer}>
+        <MedButton
+          title="Plus Slide"
+          onPress={() => {
+            navigation.navigate("PlusSlide");
+          }}
+          fontSize={20}
+        />
+      </View>
+      <View style={styles.btnContainer}>
+        <MedButton
+          title="Plus"
+          onPress={() => {
+            navigation.navigate("Plus");
+          }}
+          fontSize={20}
+        />
+      </View>
       <View style={styles.btnContainer}>
         <MedButton
           title="Skeleton"

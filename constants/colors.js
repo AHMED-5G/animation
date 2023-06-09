@@ -23,3 +23,21 @@ export const myColors = {
   yy: "#fcefab",
   black: "black",
 };
+export const theme = {
+  primary: "#dddcec",
+  primaryText: "#000",
+
+  secondary: "#6a154e",
+  secondaryText: "#FFF",
+
+  actionColor: "#2331b4",
+  actionColorText: "#FFF",
+
+  white: "white",
+  black: "black",
+
+  cardBackground: "white",
+  cardText: "#000",
+
+  borderColor: myColors.grey5,
+};
