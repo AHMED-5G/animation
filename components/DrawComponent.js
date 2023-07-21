@@ -100,8 +100,8 @@ const DrawComponent = ({ ...props }) => {
     >
       <View
         style={styles.svgContainer}
-        // {...props}
-        // {...panResponder.panHandlers}
+      // {...props}
+      // {...panResponder.panHandlers}
       >
         <Svg style={styles.drawSurface}>
           <G>

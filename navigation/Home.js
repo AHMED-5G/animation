@@ -13,6 +13,24 @@ const Home = () => {
       }}
     >
       <EmptyHeader />
+      <View style={{ marginTop: 10 }}>
+        <MedButton
+          title="graph"
+          onPress={() => {
+            navigation.navigate("Graph");
+          }}
+          fontSize={20}
+        />
+      </View>
+      <View style={{ marginTop: 10 }}>
+        <MedButton
+          title="DrawRate"
+          onPress={() => {
+            navigation.navigate("DrawRate");
+          }}
+          fontSize={20}
+        />
+      </View>
       <View style={styles.btnContainer}>
         <MedButton
           title="Password"
@@ -157,7 +175,7 @@ const Home = () => {
           fontSize={20}
         />
       </View>
-      {/* <View style={{ marginTop: 10 }}>
+      <View style={{ marginTop: 10 }}>
         <MedButton
           title="Draw"
           onPress={() => {
@@ -165,7 +183,8 @@ const Home = () => {
           }}
           fontSize={20}
         />
-      </View> */}
+      </View>
+
       <View style={{ marginTop: 10 }}>
         <MedButton
           title="Entering Existing"
