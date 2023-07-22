@@ -6,10 +6,16 @@ import { useNavigation } from "@react-navigation/native";
 
 const Home = () => {
   const navigation = useNavigation();
-  const screens = [{
-    title: 'Arc Slider',
-    navigateName: 'ArcSlider'
-  }]
+  const screens = [
+    {
+      title: 'Water Slide',
+      navigateName: 'WaterSlide'
+    },
+    {
+      title: 'Arc Slider',
+      navigateName: 'ArcSlider'
+
+    },]
   return (
     <ScrollView
       style={{

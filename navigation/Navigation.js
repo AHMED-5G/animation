@@ -32,6 +32,8 @@ import Password from "../screens/Password";
 import Graph from "../screens/Graph";
 import Path from "../screens/Path";
 import ArcSlider from "../screens/ArcSlider";
+import WhaterSlide from "../screens/WaterSlide";
+import WaterSlide from "../screens/WaterSlide";
 
 const Stack = createNativeStackNavigator();
 
@@ -59,6 +61,7 @@ function Navigation() {
         }}
         component={RemoveAllItems}
       />
+      <Stack.Screen name="WaterSlide" component={WaterSlide} />
       <Stack.Screen name="PlusSlide" component={PlusSlide} />
       <Stack.Screen name="Plus" component={Plus} />
       <Stack.Screen name="Skeleton" component={Skeleton} />
