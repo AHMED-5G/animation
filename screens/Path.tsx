@@ -21,6 +21,19 @@ import DrawComponent from "../components/DrawComponent";
 import Svg, { Path, Rect } from "react-native-svg";
 import { interpolatePath, parse } from "react-native-redash";
 export default () => {
+  //stop working after expo 49
+  //stop working after expo 49
+  //stop working after expo 49
+  //stop working after expo 49
+  //stop working after expo 49
+  //stop working after expo 49
+  //stop working after expo 49
+  //stop working after expo 49
+  //stop working after expo 49
+  //stop working after expo 49
+  //stop working after expo 49
+  //stop working after expo 49
+
   const boxHeight = 200;
   const boxWidth = width - 10;
 
@@ -38,12 +51,13 @@ export default () => {
   const changePathProgress = useSharedValue(0);
   useEffect(() => {
     runMyRate();
-    changePathProgress.value = withTiming(1, { duration: 500 });
   }, []);
 
   let index = 0;
   function runMyRate() {
     console.log("DrawRate.tsx -> runMyRate -> ");
+    // changePathProgress.value = withTiming(1, { duration: 500 });
+
     if (index < 50) {
       index++;
 
@@ -52,16 +66,11 @@ export default () => {
       // setTimeout(() => runMyRate(), 1000);
     }
   }
-  const firstPath = parse(`M 10 80 Q 195 10 190 80`);
+  const firstPath = parse(`M 10 80 Q 195 10 180 80`);
   const secondPath = parse(`M 10 80 Q 95 10 100 80`);
 
   const AnimatedPath = Animated.createAnimatedComponent(Path);
   const animatedProps = useAnimatedProps(() => {
-    // draw a circle
-
-    // const path = `
-    // M 0 ${pushFromTop} l${50} ${40} l${50} ${0}`;
-    // const path = `M 10 80 Q 95 10 120 80`;
     return {
       d: interpolatePath(
         changePathProgress.value,

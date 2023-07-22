@@ -16,7 +16,7 @@ import {
   vec,
 } from "@shopify/react-native-skia";
 import { curveBasis, line, scaleLinear, scaleTime } from "d3";
-import Svg, { G } from "react-native-svg";
+
 import { Easing } from "react-native-reanimated";
 type GraphData = {
   min: number;
@@ -26,10 +26,12 @@ type GraphData = {
 
 const Graph = () => {
   const isTransactionCompleted = useValue(1);
+
   const transactionState = useValue({
     currentChart: 0,
     next: 1,
   });
+
   const graphHeight = 400;
   const graphWidth = 370;
   function makeGraph(data: DataPoint[]): GraphData {

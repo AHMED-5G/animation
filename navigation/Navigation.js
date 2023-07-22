@@ -29,8 +29,9 @@ import PlusSlide from "../screens/PlusSlide";
 import RemoveAllItems from "../screens/RemoveAllItems";
 import { View } from "react-native";
 import Password from "../screens/Password";
-import DrawRate from "../screens/DrawRate";
 import Graph from "../screens/Graph";
+import Path from "../screens/Path";
+import ArcSlider from "../screens/ArcSlider";
 
 const Stack = createNativeStackNavigator();
 
@@ -40,7 +41,8 @@ function Navigation() {
       initialRouteName="Home"
       screenOptions={{ headerShown: false }}
     >
-      <Stack.Screen name="DrawRate" component={DrawRate} />
+      <Stack.Screen name="ArcSlider" component={ArcSlider} />
+      <Stack.Screen name="Path" component={Path} />
       <Stack.Screen name="Graph" component={Graph} />
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Password" component={Password} />

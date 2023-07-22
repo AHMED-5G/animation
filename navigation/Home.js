@@ -6,6 +6,10 @@ import { useNavigation } from "@react-navigation/native";
 
 const Home = () => {
   const navigation = useNavigation();
+  const screens = [{
+    title: 'Arc Slider',
+    navigateName: 'ArcSlider'
+  }]
   return (
     <ScrollView
       style={{
@@ -13,20 +17,34 @@ const Home = () => {
       }}
     >
       <EmptyHeader />
+      {screens.map((screen, index) =>
+        <View
+          key={index}
+          style={{ marginTop: 10 }}>
+          <MedButton
+            title={screen.title}
+            onPress={() => {
+              navigation.navigate(screen.navigateName);
+            }}
+            fontSize={20}
+          />
+        </View>)
+      }
       <View style={{ marginTop: 10 }}>
         <MedButton
-          title="graph"
+          title="Graph"
           onPress={() => {
             navigation.navigate("Graph");
           }}
           fontSize={20}
         />
       </View>
+
       <View style={{ marginTop: 10 }}>
         <MedButton
-          title="DrawRate"
+          title="Path"
           onPress={() => {
-            navigation.navigate("DrawRate");
+            navigation.navigate("Path");
           }}
           fontSize={20}
         />
