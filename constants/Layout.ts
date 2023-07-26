@@ -16,7 +16,6 @@ export default {
 export const figmaScreenHeight = 850;
 export const figmaScreenWidth = 392;
 
-console.log("Layout.ts -> ", height);
 const heightWithRatioOfWindowHeight = (givenHeight: number): number => {
   return (givenHeight / figmaScreenHeight) * windowHeight;
 };

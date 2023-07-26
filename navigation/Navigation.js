@@ -32,8 +32,8 @@ import Password from "../screens/Password";
 import Graph from "../screens/Graph";
 import Path from "../screens/Path";
 import ArcSlider from "../screens/ArcSlider";
-import WhaterSlide from "../screens/WaterSlide";
 import WaterSlide from "../screens/WaterSlide";
+import SkiaPlayGround from "../screens/SkiaPlayGround";
 
 const Stack = createNativeStackNavigator();
 
@@ -43,6 +43,7 @@ function Navigation() {
       initialRouteName="Home"
       screenOptions={{ headerShown: false }}
     >
+      <Stack.Screen name="SkiaPlayGround" component={SkiaPlayGround} />
       <Stack.Screen name="ArcSlider" component={ArcSlider} />
       <Stack.Screen name="Path" component={Path} />
       <Stack.Screen name="Graph" component={Graph} />
@@ -102,4 +103,4 @@ function Navigation() {
 
 export default Navigation;
 
-// export default Navigation;
+

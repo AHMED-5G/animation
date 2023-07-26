@@ -8,6 +8,10 @@ const Home = () => {
   const navigation = useNavigation();
   const screens = [
     {
+      title: 'Skia Play Ground',
+      navigateName: 'SkiaPlayGround'
+    },
+    {
       title: 'Water Slide',
       navigateName: 'WaterSlide'
     },
