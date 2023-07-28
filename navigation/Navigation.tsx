@@ -34,6 +34,7 @@ import Path from "../screens/Path";
 import ArcSlider from "../screens/ArcSlider";
 import WaterSlide from "../screens/WaterSlide";
 import SkiaPlayGround from "../screens/SkiaPlayGround";
+import ThreeDCard from "../screens/threeDcard/ThreeDCard";
 
 const Stack = createNativeStackNavigator();
 
@@ -43,6 +44,7 @@ function Navigation() {
       initialRouteName="Home"
       screenOptions={{ headerShown: false }}
     >
+      <Stack.Screen name="threeDCard" component={ThreeDCard} />
       <Stack.Screen name="SkiaPlayGround" component={SkiaPlayGround} />
       <Stack.Screen name="ArcSlider" component={ArcSlider} />
       <Stack.Screen name="Path" component={Path} />
@@ -102,5 +104,3 @@ function Navigation() {
 }
 
 export default Navigation;
-
-

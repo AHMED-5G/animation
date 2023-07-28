@@ -7,6 +7,11 @@ import { useNavigation } from "@react-navigation/native";
 const Home = () => {
   const navigation = useNavigation();
   const screens = [
+
+    {
+      title: '3D Card',
+      navigateName: 'threeDCard'
+    },
     {
       title: 'Skia Play Ground',
       navigateName: 'SkiaPlayGround'
@@ -19,7 +24,125 @@ const Home = () => {
       title: 'Arc Slider',
       navigateName: 'ArcSlider'
 
-    },]
+    },
+    {
+      title: 'Graph',
+      navigateName: 'Graph'
+
+    },
+    {
+      title: 'Path',
+      navigateName: 'Path'
+    },
+    {
+      title: 'Password',
+      navigateName: 'Password'
+    },
+    {
+      title: 'Remove All Items',
+      navigateName: 'RemoveAllItems'
+    },
+    {
+      title: 'Plus Slide',
+      navigateName: 'PlusSlide'
+    },
+    {
+      title: 'Plus',
+      navigateName: 'Plus'
+    },
+    {
+      title: 'Skeleton',
+      navigateName: 'Skeleton'
+    },
+    {
+      title: 'Clock',
+      navigateName: 'Clock'
+    },
+    {
+      title: 'Bottom Sheet',
+      navigateName: 'BottomSheet'
+    },
+    {
+      title: 'Bubble',
+      navigateName: 'Bubble'
+    },
+    {
+      title: 'Dive In Circle',
+      navigateName: 'DiveInCircle'
+    },
+    {
+      title: 'Perspective Menu',
+      navigateName: 'PerspectiveMenu'
+    },
+    {
+      title: 'Color Piker',
+      navigateName: 'ColorPiker'
+    },
+    {
+      title: 'Whats Up Reanimated',
+      navigateName: 'WhatsUpReanimated'
+    },
+    {
+      title: 'Log In With Image',
+      navigateName: 'LogInWithImage'
+    },
+    {
+      title: 'Facebook Like',
+      navigateName: 'FacebookLike'
+    },
+    {
+      title: 'Pan Responder',
+      navigateName: 'PanResponder'
+    },
+    {
+      title: 'Drag And Drop',
+      navigateName: 'DragAndDrop'
+    },
+    {
+      title: 'Draw',
+      navigateName: 'Draw'
+    },
+    {
+      title: 'Entering Existing',
+      navigateName: 'EnteringExisting'
+    },
+    {
+      title: 'Flash Message',
+      navigateName: 'FlashMessage'
+    },
+    {
+      title: 'ScrollView From Scratch',
+      navigateName: 'ScrollViewFromScratch'
+    },
+    {
+      title: 'Hotel FlatList',
+      navigateName: 'HotelFlatList'
+    },
+    {
+      title: 'Square In Loop',
+      navigateName: 'SquareInLoop'
+    },
+    // {
+    //   title: 'RippleEffectAnimation',
+    //   navigateName: 'RippleEffectAnimation'
+    // }, 
+    {
+      title: 'Square Inside Circle',
+      navigateName: 'SquareInsideCircle'
+    },
+    {
+      title: 'Double Tap Like Instagram',
+      navigateName: 'DoubleTapLikeInstagram'
+    },
+    {
+      title: 'Image Double Tap',
+      navigateName: 'ImageDoubleTap'
+    },
+    // {
+    //   title: 'SwipeToDelete',
+    //   navigateName: 'SwipeToDelete'
+    // },
+  ]
   return (
     <ScrollView
       style={{
@@ -40,267 +163,6 @@ const Home = () => {
           />
         </View>)
       }
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          title="Graph"
-          onPress={() => {
-            navigation.navigate("Graph");
-          }}
-          fontSize={20}
-        />
-      </View>
-
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          title="Path"
-          onPress={() => {
-            navigation.navigate("Path");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={styles.btnContainer}>
-        <MedButton
-          title="Password"
-          onPress={() => {
-            navigation.navigate("Password");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={styles.btnContainer}>
-        <MedButton
-          title="Remove All Items"
-          onPress={() => {
-            navigation.navigate("RemoveAllItems");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={styles.btnContainer}>
-        <MedButton
-          title="Plus Slide"
-          onPress={() => {
-            navigation.navigate("PlusSlide");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={styles.btnContainer}>
-        <MedButton
-          title="Plus"
-          onPress={() => {
-            navigation.navigate("Plus");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={styles.btnContainer}>
-        <MedButton
-          title="Skeleton"
-          onPress={() => {
-            navigation.navigate("Skeleton");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={styles.btnContainer}>
-        <MedButton
-          title="Clock"
-          onPress={() => {
-            navigation.navigate("Clock");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={styles.btnContainer}>
-        <MedButton
-          title="Bottom Sheet"
-          onPress={() => {
-            navigation.navigate("BottomSheet");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={styles.btnContainer}>
-        <MedButton
-          title="Bubble"
-          onPress={() => {
-            navigation.navigate("Bubble");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={styles.btnContainer}>
-        <MedButton
-          title="Dive In Circle"
-          onPress={() => {
-            navigation.navigate("DiveInCircle");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={styles.btnContainer}>
-        <MedButton
-          title="Perspective Menu"
-          onPress={() => {
-            navigation.navigate("PerspectiveMenu");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={styles.btnContainer}>
-        <MedButton
-          title="Color Piker"
-          onPress={() => {
-            navigation.navigate("ColorPiker");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={styles.btnContainer}>
-        <MedButton
-          title="Whats Up Reanimated"
-          onPress={() => {
-            navigation.navigate("WhatsUpReanimated");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          title="LogIn With Image"
-          onPress={() => {
-            navigation.navigate("LogInWithImage");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          title="Facebook Like"
-          onPress={() => {
-            navigation.navigate("FacebookLike");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          title="Pan Responder"
-          onPress={() => {
-            navigation.navigate("PanResponder");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          title="Drag And Drop"
-          onPress={() => {
-            navigation.navigate("DragAndDrop");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          title="Draw"
-          onPress={() => {
-            navigation.navigate("Draw");
-          }}
-          fontSize={20}
-        />
-      </View>
-
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          title="Entering Existing"
-          onPress={() => {
-            navigation.navigate("EnteringExisting");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          title="Flash Message"
-          onPress={() => {
-            navigation.navigate("FlashMessage");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          title="Scroll View From Scratch"
-          onPress={() => {
-            navigation.navigate("ScrollViewFromScratch");
-          }}
-          fontSize={20}
-        />
-      </View>
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          title="Hotel Flat List"
-          onPress={() => {
-            navigation.navigate("HotelFlatList");
-          }}
-        />
-      </View>
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          title="Square In Loop"
-          onPress={() => {
-            navigation.navigate("SquareInLoop");
-          }}
-        />
-      </View>
-      {/* <View style={{ marginTop: 10 }}>
-        <MedButton
-          fontSize={20}
-          title="Ripple Effect Animation"
-          onPress={() => {
-            navigation.navigate("RippleEffectAnimation");
-          }}
-        />
-      </View> */}
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          fontSize={20}
-          title="Square Inside Circle"
-          onPress={() => {
-            navigation.navigate("SquareInsideCircle");
-          }}
-        />
-      </View>
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          fontSize={20}
-          title="Double Tap Like Instagram"
-          onPress={() => {
-            navigation.navigate("DoubleTapLikeInstagram");
-          }}
-        />
-      </View>
-      <View style={{ marginTop: 10 }}>
-        <MedButton
-          fontSize={20}
-          title="Image Double Tap"
-          onPress={() => {
-            navigation.navigate("ImageDoubleTap");
-          }}
-        />
-      </View>
-      {/* <View style={{}}>
-        <MedButton
-          fontSize={20}
-          title="Swipe To Delete"
-          onPress={() => {
-            navigation.navigate("SwipeToDelete");
-          }}
-        />
-      </View> */}
     </ScrollView>
   );
 };

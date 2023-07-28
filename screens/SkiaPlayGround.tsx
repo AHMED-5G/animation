@@ -1,7 +1,7 @@
 //https://shopify.github.io/react-native-skia/docs/group
 
-import { StyleSheet, Text, View } from "react-native";
-import React, { useEffect, useState } from "react";
+import { Button, StyleSheet, View, useWindowDimensions } from "react-native";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   Canvas,
   Circle,
@@ -37,17 +37,39 @@ import {
   Drawing,
   ImageSVG,
   fitbox,
+  Glyphs,
+  TextPath,
+  Shader,
+  TwoPointConicalGradient,
+  Shadow,
+  Text,
+  RuntimeShader,
+  useClockValue,
+  useComputedValue,
+  useLoop,
+  Selector,
+  useValueEffect,
+  interpolate,
+  useSpring,
+  runSpring,
+  useTouchHandler,
 } from "@shopify/react-native-skia";
 import Animated, {
+  useAnimatedStyle,
   useDerivedValue,
   useSharedValue,
+  withDecay,
   withRepeat,
   withTiming,
 } from "react-native-reanimated";
 import { width, height } from "../constants/dimensions";
 import type { ReactNode } from "react";
 import { useContext, createContext } from "react";
-
+import {
+  GestureDetector,
+  Gesture,
+  GestureHandlerRootView,
+} from "react-native-gesture-handler";
 const SkiaPlayGround = () => {
   const sv = useSharedValue(0);
 
@@ -56,21 +78,18 @@ const SkiaPlayGround = () => {
       duration: 1000,
     });
   }, []);
-  const svg = Skia.SVG.MakeFromString(
-    `<svg viewBox='0 0 20 20' width="20" height="20" xmlns='http://www.w3.org/2000/svg'>
-      <circle cx='10' cy='10' r='10' fill='#00ffff'/>
-    </svg>`
-  )!;
-   
-  const width = 256;
-  const height = 256;
-  const src = rect(0, 0, svg.width(), svg.height());
-  const dst = rect(0, 0, width, height);
+  const cx = useValue(100);
+  const cy = useValue(100);
+ 
+  const touchHandler = useTouchHandler({
+    onActive: ({ x, y }) => {
+      cx.current = x;
+      cy.current = y;
+    },
+  });
   return (
-    <Canvas style={{ flex: 1 }}>
-    <Group transform={fitbox("contain", src, dst)}>
-      <ImageSVG svg={svg} x={0} y={0} width={20} height={20} />
-      </Group>
+    <Canvas style={{ flex: 1 }} onTouch={touchHandler}>
+      <Circle cx={cx} cy={cy} r={10} color="red" />
     </Canvas>
   );
 };
